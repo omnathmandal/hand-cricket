@@ -32,4 +32,4 @@ $ python --version
 ![cat](https://media.giphy.com/media/ovHlQnHMZgVu9XRJfX/giphy.gif)
 
 ---
-<img src="https://64.media.tumblr.com/473e088055e8da741cd2df8f82b2a0a5/tumblr_nbhpj8xMGy1qg6rkio1_1280.gifv" alt="">
+<img src="https://64.media.tumblr.com/473e088055e8da741cd2df8f82b2a0a5/tumblr_nbhpj8xMGy1qg6rkio1_1280.gifv" width="500" height ="400">
