@@ -18,10 +18,12 @@ $ python main.py
 ```
 ---
 
-> note : This project is made using python version ***Python 3.10.7***
+> ### note :
+>
+>This project is made using   ***Python 3.10.7*** 
 
 `
-to check your python version run the command below 
+to check which python version you are using run the command below  
 `
 ```bash
 #command to check python version
@@ -32,4 +34,3 @@ $ python --version
 ![cat](https://media.giphy.com/media/ovHlQnHMZgVu9XRJfX/giphy.gif)
 
 ---
-<img src="https://64.media.tumblr.com/473e088055e8da741cd2df8f82b2a0a5/tumblr_nbhpj8xMGy1qg6rkio1_1280.gifv" width="500" height ="400">
