@@ -1,4 +1,4 @@
-from NormalMode import normal
+from normal_mode import normal
 
 #main function
 def main():

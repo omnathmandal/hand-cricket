@@ -1,4 +1,4 @@
-from FuncS import *
+from funcs import *
 
 
 def normal():
