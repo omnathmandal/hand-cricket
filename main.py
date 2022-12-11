@@ -1,6 +1,6 @@
-from normal_mode import normal
+from game import normal
 
-#main function
+# driver code
 def main():
     normal()
 
