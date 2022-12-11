@@ -2,9 +2,11 @@
 name = "hand-cricket"
 version = "0.1.0"
 description = "Digitalized version of Hand cricket"
+license = "MIT"
 authors = ["Omnath Mandal <omnathmandal2003@gmail.com>"]
 readme = "README.md"
 packages = [{include = "game"}]
+repository = "https://github.com/omnathmandal/hand-cricket"
 
 [tool.poetry.dependencies]
 python = "^3.11"
