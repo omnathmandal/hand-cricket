@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Digitalized version of Hand cricket"
 authors = ["Omnath Mandal <omnathmandal2003@gmail.com>"]
 readme = "README.md"
-packages = [{include = "Functions"}]
+packages = [{include = "game"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
