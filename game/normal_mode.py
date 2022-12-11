@@ -1,5 +1,6 @@
 from .gamelogic import *
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
+
 
 def normal() -> None:
     print(Fore.LIGHTBLACK_EX + f"\n{'+'*50}")
@@ -46,7 +47,7 @@ def normal() -> None:
         print(Fore.LIGHTRED_EX + f"\t<-- Target = {target[0]} -->")
         print(Fore.LIGHTBLACK_EX + "-" * 50)
         target2 = secondInn(o, pl, n, "player", target[0])
-        print(LIGHTBLACK_EX + f"\n{'-'*50}")
+        print(Fore.LIGHTBLACK_EX + f"\n{'-'*50}")
         print(Fore.BLUE + "\t<<<<< SCOREBOARD >>>>>")
         print(Fore.LIGHTBLACK_EX + "-" * 50)
         print(Fore.LIGHTBLUE_EX + ">>>\tFirst Innings\t<<<\n")

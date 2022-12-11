@@ -2,8 +2,9 @@ import platform
 import random
 import time
 
-from colorama import Fore, Back, Style
 from playsound import playsound
+from colorama import Fore, Style
+
 
 def bot() -> int:
     return random.randint(0, 6)
@@ -30,7 +31,9 @@ def inputR(min: int, max: int) -> int:
 
 
 def inputR2(min: int) -> int:
-    n = int(input(Fore.YELLOW + "Enter the numbers of players playing (greater than 1) :"))
+    n = int(
+        input(Fore.YELLOW + "Enter the numbers of players playing (greater than 1) :")
+    )
     if n >= min:
         return n
     else:
@@ -125,14 +128,20 @@ def secondInn(overs: int, l: list, p: int, batsman: str, target: int) -> int:
                     print(Fore.LIGHTRED_EX + f"Score :\t {total}/{c}")
                     print(Fore.LIGHTBLACK_EX + "-" * 50)
                     if batsman == "player":
-                        print(Fore.LIGHTRED_EX + f"\n\t<-- Opponent won by {target-total} runs! -->")
+                        print(
+                            Fore.LIGHTRED_EX
+                            + f"\n\t<-- Opponent won by {target-total} runs! -->"
+                        )
                         print("-" * 50)
                         if platform.system() == "Windows":
                             playsound(".\\assets\\clappingLose.wav")
                         else:
                             playsound("./assets/clappingLose.wav")
                     else:
-                        print(Fore.LIGHTGREEN_EX + f"\t<-- You won by {target-total} runs! -->")
+                        print(
+                            Fore.LIGHTGREEN_EX
+                            + f"\t<-- You won by {target-total} runs! -->"
+                        )
                         print(Fore.LIGHTBLACK_EX + "-" * 50)
                         if platform.system() == "Windows":
                             playsound(".\\assets\\clappingWin.wav")
@@ -161,7 +170,7 @@ def secondInn(overs: int, l: list, p: int, batsman: str, target: int) -> int:
             print(Fore.LIGHTBLACK_EX + "-" * 50)
             if batsman == "player":
                 print(Fore.LIGHTGREEN_EX + f"\n\t<-- You won by {p-c} wickets -->")
-                print(Fore.LIGHTBLACK_E + "-" * 50)
+                print(Fore.LIGHTBLACK_EX + "-" * 50)
                 if platform.system() == "Windows":
                     playsound(".\\assets\\clappingWin.wav")
                 else:
@@ -205,7 +214,7 @@ def secondInn(overs: int, l: list, p: int, batsman: str, target: int) -> int:
 
 def matchStart() -> str:
     print(Fore.YELLOW + "\n<-- Note : Please use exact phrase for the options -->\n")
-    print(Fore.LIGHTCYAN_EX +"\t<---   Welcome to the toss   --->\n")
+    print(Fore.LIGHTCYAN_EX + "\t<---   Welcome to the toss   --->\n")
     tossOut = toss()
     if random.randint(0, 1) == 0:
         print(Fore.GREEN + "You will choose ! \n")
@@ -226,15 +235,15 @@ def matchStart() -> str:
             else:
                 return "bot"
         else:
-            print(Fore.RED +"Bot Won the toss!")
+            print(Fore.RED + "Bot Won the toss!")
             ch2 = random.randint(0, 1)
             if ch2 == 0:
                 time.sleep(random.randint(1, 2))
-                print(Fore.RED +"Bot chose to bowl first!")
+                print(Fore.RED + "Bot chose to bowl first!")
                 return "player"
             else:
                 time.sleep(random.randint(1, 2))
-                print(Fore.RED +"Bot chose to bat first!")
+                print(Fore.RED + "Bot chose to bat first!")
                 return "bot"
     else:
         print(Fore.LIGHTRED_EX + "Bot will choose \n")
@@ -244,7 +253,7 @@ def matchStart() -> str:
             print(Fore.LIGHTGREEN_EX + "Bot chose HEADS.")
         else:
             time.sleep(random.randint(1, 2))
-            print(Fore.LIGHTGREEN_EX +"Bot chose TAILS.")
+            print(Fore.LIGHTGREEN_EX + "Bot chose TAILS.")
 
         print(Fore.LIGHTGREEN_EX + "\n\t*Coin flicks\n")
         # coin flip sound
@@ -263,11 +272,11 @@ def matchStart() -> str:
                 return "player"
             else:
                 time.sleep(random.randint(1, 2))
-                print(Fore.LIGHTRED_EX +"Bot opt to bat.")
+                print(Fore.LIGHTRED_EX + "Bot opt to bat.")
                 return "bot"
         else:
             print(Fore.LIGHTGREEN_EX + "Bot lost the toss!")
-            print(Fore.GREEN +"Please Choose.")
+            print(Fore.GREEN + "Please Choose.")
             ch3 = input(Fore.LIGHTYELLOW_EX + "BAT or BOWL :")
             if (((ch3.upper()).lstrip()).rstrip()) == "BAT":
                 return "player"
@@ -280,4 +289,3 @@ def Scorcard(ln: list, ls: list, Score: int, wicket: int) -> None:
     for i in range(n):
         print(Fore.YELLOW + f"{ln[i]} Scored --> \t{ls[i]}")
     print(Fore.YELLOW + f"total = \t {Score}/{wicket}")
-    
