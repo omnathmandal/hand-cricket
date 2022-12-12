@@ -5,7 +5,7 @@ description = "Digitalized version of Hand cricket"
 license = "MIT"
 authors = ["Omnath Mandal <omnathmandal2003@gmail.com>"]
 readme = "README.md"
-packages = [{include = "game"}]
+packages = [{include = "game"}, {include = "tests"}]
 repository = "https://github.com/omnathmandal/hand-cricket"
 
 [tool.poetry.dependencies]
