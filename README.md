@@ -28,11 +28,11 @@ $ poetry run python main.py
 
 ---
 
-> ### note
+> ### Note:
 >
 > This project is made using **_Python 3.11_**
 
-> to check which python version you are using run the command below
+`To check which python version you are using run the command below.`
 
 ```bash
 #command to check python version
