@@ -1,5 +1,6 @@
-from .gamelogic import *
 from colorama import Fore, Style
+
+from .gamelogic import *
 
 
 def normal() -> None:

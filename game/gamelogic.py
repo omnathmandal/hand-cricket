@@ -2,8 +2,8 @@ import platform
 import random
 import time
 
-from playsound import playsound
 from colorama import Fore, Style
+from playsound import playsound
 
 
 def bot() -> int:
@@ -41,13 +41,13 @@ def inputR2(min: int) -> int:
         return inputR2(min)
 
 
-def addPlayerName(n: int, li: list) -> None:
+def addPlayerName(n: int, li: list[str]) -> None:
     for i in range(n):
         name = input(Fore.LIGHTMAGENTA_EX + f"Enter {i+1} player name :")
         li.append(name)
 
 
-def firstInn(overs: int, l: list, p: int, batsman: str) -> list:
+def firstInn(overs: int, l: list[int], p: int, batsman: str) -> list[int, int]:
     print(Fore.LIGHTBLACK_EX + "-" * 50)
     print(Fore.LIGHTBLACK_EX + "\n\t<---- 1st Innings ---->\n")
     print(Fore.LIGHTBLACK_EX + "-" * 50)
@@ -90,7 +90,9 @@ def firstInn(overs: int, l: list, p: int, batsman: str) -> list:
     return [total, c]
 
 
-def secondInn(overs: int, l: list, p: int, batsman: str, target: int) -> int:
+def secondInn(
+    overs: int, l: list[int], p: int, batsman: str, target: int
+) -> list[int, int]:
     print(Fore.LIGHTBLACK_EX + "-" * 50)
     print(Fore.LIGHTBLACK_EX + "\n\t<---- 2nd Innings ---->\n")
     print(Fore.LIGHTBLACK_EX + "-" * 50)
@@ -284,7 +286,7 @@ def matchStart() -> str:
                 return "bot"
 
 
-def Scorcard(ln: list, ls: list, Score: int, wicket: int) -> None:
+def Scorcard(ln: list[str], ls: list[int], Score: int, wicket: int) -> None:
     n = len(ls)
     for i in range(n):
         print(Fore.YELLOW + f"{ln[i]} Scored --> \t{ls[i]}")
