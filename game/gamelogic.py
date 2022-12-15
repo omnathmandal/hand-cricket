@@ -2,15 +2,23 @@ import platform
 import random
 import time
 
-from colorama import Fore, Style
+from colorama import Fore
 from playsound import playsound
 
 
 def bot() -> int:
+    """
+    The bot player
+    It return a random value from 0 to 6
+    """
     return random.randint(0, 6)
 
 
 def botname(n: int, ln: list) -> None:
+    """
+    The function to assign names 
+    to the Bot players
+    """
     for i in range(n):
         s = f"Bot{i+1}"
         ln.append(s)
@@ -18,10 +26,18 @@ def botname(n: int, ln: list) -> None:
 
 
 def toss() -> int:
+    """
+    The function which returns 0 and 1
+    which implies Heads or Tails
+    """
     return random.randint(0, 1)
 
 
 def inputR(min: int, max: int) -> int:
+    """
+    The function which validates
+    user input  
+    """
     n = int(input(Fore.GREEN + "Move :"))
     if n <= max and n >= min:
         return n
@@ -31,6 +47,10 @@ def inputR(min: int, max: int) -> int:
 
 
 def inputR2(min: int) -> int:
+    """
+    The function which validates
+    the number of players entered by the user
+    """
     n = int(
         input(Fore.YELLOW + "Enter the numbers of players playing (greater than 1) :")
     )
@@ -42,12 +62,20 @@ def inputR2(min: int) -> int:
 
 
 def addPlayerName(n: int, li: list[str]) -> None:
+    """
+    The function to assign 
+    player names to the players
+    """
     for i in range(n):
         name = input(Fore.LIGHTMAGENTA_EX + f"Enter {i+1} player name :")
         li.append(name)
 
 
 def firstInn(overs: int, l: list[int], p: int, batsman: str) -> list[int, int]:
+    """
+    Game Function:
+    returns : a list containing total and counter
+    """
     print(Fore.LIGHTBLACK_EX + "-" * 50)
     print(Fore.LIGHTBLACK_EX + "\n\t<---- 1st Innings ---->\n")
     print(Fore.LIGHTBLACK_EX + "-" * 50)
@@ -93,6 +121,10 @@ def firstInn(overs: int, l: list[int], p: int, batsman: str) -> list[int, int]:
 def secondInn(
     overs: int, l: list[int], p: int, batsman: str, target: int
 ) -> list[int, int]:
+    """
+    Game Function:
+    returns : a list containing total and counter
+    """
     print(Fore.LIGHTBLACK_EX + "-" * 50)
     print(Fore.LIGHTBLACK_EX + "\n\t<---- 2nd Innings ---->\n")
     print(Fore.LIGHTBLACK_EX + "-" * 50)
@@ -215,6 +247,10 @@ def secondInn(
 
 
 def matchStart() -> str:
+    """
+    Game Function:
+    returns the result of toss batting and bowling
+    """
     print(Fore.YELLOW + "\n<-- Note : Please use exact phrase for the options -->\n")
     print(Fore.LIGHTCYAN_EX + "\t<---   Welcome to the toss   --->\n")
     tossOut = toss()
@@ -287,6 +323,9 @@ def matchStart() -> str:
 
 
 def Scorcard(ln: list[str], ls: list[int], Score: int, wicket: int) -> None:
+    """
+    Prints the Scorecard 
+    """
     n = len(ls)
     for i in range(n):
         print(Fore.YELLOW + f"{ln[i]} Scored --> \t{ls[i]}")
