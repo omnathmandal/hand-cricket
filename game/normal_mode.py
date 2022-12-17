@@ -1,9 +1,12 @@
-from colorama import Fore, Style
+from colorama import Fore
 
 from .gamelogic import *
 
 
 def normal() -> None:
+    """
+    Game Start function
+    """
     print(Fore.LIGHTBLACK_EX + f"\n{'+'*50}")
     print(Fore.LIGHTMAGENTA_EX + "<<<<<<<<<<\t WELCOME \t>>>>>>>>>>")
     print(Fore.LIGHTBLACK_EX + f"{'+'*50}")
